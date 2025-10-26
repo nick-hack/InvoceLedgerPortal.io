@@ -2,7 +2,7 @@
 body {
   margin: 0; /* Removes default margin around the page */
   font-family: Arial, sans-serif; /* Sets a clean, readable font */
-  display: flex; /* Enables horizontal layout: sidebar + content */
+  /* display: flex;  */
 }
 
 /* Sidebar container */

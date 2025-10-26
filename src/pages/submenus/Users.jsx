@@ -180,8 +180,13 @@ const Users = () => {
   );
 
   return (
-    <div className="d-flex">
+    // <div className="d-flex">
+       <div className="users-layout">
+
+     <aside className="users-sidebar">
       <Sidebar />
+    </aside>
+
       <div className="flex-grow-1 p-4">
         <div className="users-container">
           <ul className="nav nav-pills mb-3" role="tablist">
@@ -285,6 +290,7 @@ const Users = () => {
         </div>
       )}
     </div>
+    // </div>
   );
 };
 

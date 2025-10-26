@@ -4,6 +4,7 @@
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
+  width:100%;
 }
 
 .nav-pills .nav-link {
@@ -293,10 +294,10 @@
   color: #fff;
 }
 /* Container */
-.users-container {
+/* .users-container {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 
 /* Tabs */
 .nav-pills .nav-link {
@@ -520,4 +521,26 @@
   padding: 6px 12px;
   font-size: 14px;
   cursor: pointer;
+}
+
+/* Layout wrapper to prevent sidebar overlap */
+.users-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.users-sidebar {
+  width: 260px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.users-main {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #ffffff;
 }
