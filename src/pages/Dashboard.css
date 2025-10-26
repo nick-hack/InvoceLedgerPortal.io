@@ -1,0 +1,84 @@
+
+/* Topbar styles */
+.topbar {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 999;
+}
+
+/* Main content wrapper */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Dashboard header */
+.dashboard-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Chart card row */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Chart card styling */
+.chart-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Dashboard section titles */
+.dashboard-section h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Dashboard charts container */
+.dashboard-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* DataTable styling */
+.data-table {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .dashboard-charts {
+    flex-direction: column;
+  }
+}

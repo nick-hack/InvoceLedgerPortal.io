@@ -1,0 +1,89 @@
+.finance-home {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.welcome-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  width: 90%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  animation: slideDown 1.2s ease-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+.stats-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.stat-bar {
+  margin-bottom: 15px;
+}
+
+.stat-bar label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  background-color: #00c9ff;
+  height: 100%;
+  animation: fillGrow 2s ease-out;
+}
+
+@keyframes fillGrow {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.animated-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

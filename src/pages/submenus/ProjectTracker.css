@@ -1,0 +1,108 @@
+.tracker-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.back-button {
+  margin-bottom: 10px;
+  background-color: #eee;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tracker-box {
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tracker-box:hover {
+  background-color: #e0e0e0;
+}
+
+.tracker-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.issue-creator {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.issue-creator input {
+  padding: 8px;
+  flex: 1;
+}
+
+.issue-creator button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.kanban-column {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.kanban-column h3 {
+  text-align: center;
+  background-color: #2196f3;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.kanban-column ul {
+  list-style: none;
+  padding: 0;
+  min-height: 50px;
+}
+
+.kanban-column li {
+  background-color: white;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: grab;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-actions button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}

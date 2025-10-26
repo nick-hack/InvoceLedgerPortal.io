@@ -1,0 +1,523 @@
+/* Users.css */
+
+.users-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.nav-pills .nav-link {
+  color: #495057;
+  margin-right: 10px;
+  font-weight: 500;
+ position: relative;
+   padding-right: 2.5rem;
+/* Add space for badge */
+  overflow: visible; /* Ensure badge isn't clipped */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.nav-pills .badge {
+  font-size: 0.75rem;
+  padding: 5px 9px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  transform: translate(50%, -50%);
+  z-index: 1;
+}
+
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.status-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-btn.active {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-btn.deactive {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.icon-actions {
+  white-space: nowrap; /* Prevent icons from wrapping */
+}
+
+.icon-actions .icon {
+  display: inline-block;
+  margin-right: 12px; /* Adjust spacing between icons */
+  vertical-align: middle;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Optional: remove margin from last icon */
+.icon-actions .icon:last-child {
+  margin-right: 0;
+}
+
+
+.icon {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.view-icon:hover {
+  color: #0d6efd;
+}
+
+.edit-icon:hover {
+  color: #ffc107;
+}
+
+.delete-icon:hover {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .user-table th, .user-table td {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+}
+
+.add-user-btn {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-user-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* .add-user-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.add-user-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
+  height:20px;
+  width: 100%;
+} */
+
+.add-user-form button {
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-user-form button:hover {
+  background-color: #157347;
+}
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Modal box */
+.modal-box {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal form */
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.add-user-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccccccb3;
+  border-radius: 4px;
+}
+
+/* Inline Add User Form */
+.inline-add-user-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.inline-add-user-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
+}
+
+.inline-add-user-form button {
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inline-add-user-form button:hover {
+  background-color: #157347;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Modal box */
+.modal-box {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal form */
+.modal-add-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.modal-add-user-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.modal-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #198754;
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: #fff;
+}
+/* Container */
+.users-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tabs */
+.nav-pills .nav-link {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-pills .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 0.75rem;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Status Button */
+.status-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.status-btn.active {
+  background-color: #28a745;
+}
+
+.status-btn.deactive {
+  background-color: #6c757d;
+}
+
+/* Action Icons */
+/* .icon-actions {
+  display: flex;
+  gap: 10px;
+} */
+
+.icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.view-icon:hover {
+  color: #17a2b8;
+}
+
+.edit-icon:hover {
+  color: #ffc107;
+}
+
+.delete-icon:hover {
+  color: #dc3545;
+}
+
+/* Add User Button */
+.add-user-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-user-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h5 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form */
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-user-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.add-user-form input:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.search-input {
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+.page-size-selector {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.page-size-selector select {
+  padding: 4px 8px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}

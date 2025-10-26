@@ -1,0 +1,30 @@
+.dashboard-container {
+  padding: 1.5rem;
+  background: #f8f9fc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #343a40;
+  font-size: 1.8rem;
+}
+
+.charts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.chart-cards {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  width: 270px;
+  height: 200px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}

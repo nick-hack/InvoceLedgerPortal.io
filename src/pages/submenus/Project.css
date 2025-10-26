@@ -1,0 +1,73 @@
+/* Project.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.project-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table th,
+.project-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.project-table th {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.project-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.view-button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #005fa3;
+}
+.search-fields {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}

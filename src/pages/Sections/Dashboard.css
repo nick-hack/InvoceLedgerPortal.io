@@ -1,0 +1,29 @@
+.dashboard-section {
+  padding: 2rem;
+  background-color: #f8f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-section h4 {
+  margin-bottom: 1.5rem;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.dashboard-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.chart-card {
+  flex: 1 1 48%;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}

@@ -1,0 +1,11 @@
+.table-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.table-container {
+  flex: 1 1 45%;
+  min-width: 300px;
+}

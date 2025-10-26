@@ -1,0 +1,123 @@
+/* Base body styling */
+body {
+  margin: 0; /* Removes default margin around the page */
+  font-family: Arial, sans-serif; /* Sets a clean, readable font */
+  display: flex; /* Enables horizontal layout: sidebar + content */
+}
+
+/* Sidebar container */
+.sidebar {
+  width: 240px; /* Default expanded width */
+  min-height: 100vh; /* Full viewport height */
+  transition: width 0.3s ease; /* Smooth width change when collapsing */
+  background-color: #343a40; /* Dark background */
+  overflow: hidden; /* Hides overflowing content when collapsed */
+  display: flex; /* Enables vertical stacking of children */
+  flex-direction: column; /* Stack children top to bottom */
+  color: white; /* Text color */
+  position: fixed; /* Keeps sidebar fixed on the left */
+  top: 0;
+  left: 0;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 70px; /* Narrow width when collapsed */
+}
+
+/* Sidebar header section */
+.sidebar-header {
+  padding: 1rem; /* Adds space around header content */
+}
+
+/* Sidebar header title */
+.sidebar-header h5 {
+  margin: 0; /* Removes default margin */
+  transition: opacity 0.3s ease; /* Smooth fade when collapsing */
+}
+
+/* Hide header title when collapsed */
+.sidebar.collapsed .sidebar-header h5 {
+  opacity: 0; /* Makes it invisible */
+  pointer-events: none; /* Prevents interaction */
+}
+
+/* Navigation link styling */
+.nav-link {
+  padding: 0.75rem 1rem; /* Adds vertical and horizontal padding */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflowed text */
+  text-overflow: ellipsis; /* Adds "..." to overflowed text */
+  transition: padding 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+  text-decoration: none; /* Removes underline */
+  color: white; /* Text color */
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light overlay on hover */
+}
+
+/* Collapsed nav links */
+.sidebar.collapsed .nav-link {
+  padding-left: 0.5rem; /* Less padding */
+  padding-right: 0.5rem;
+  opacity: 0; /* Hide text */
+  pointer-events: none; /* Disable interaction */
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 0.8rem; /* Smaller font */
+  color: #adb5bd; /* Light gray color */
+  margin: 1rem 0 0.5rem 1rem; /* Top/bottom/left spacing */
+  text-transform: uppercase; /* Makes text uppercase */
+  transition: opacity 0.3s ease; /* Smooth fade */
+}
+
+/* Hide section titles when collapsed */
+.sidebar.collapsed .section-title {
+  opacity: 0; /* Invisible */
+  pointer-events: none; /* Not clickable */
+}
+
+/* Submenu container */
+.submenu {
+  transition: max-height 0.3s ease; /* Smooth expand/collapse */
+  overflow: hidden; /* Hide overflowed items */
+}
+
+/* Submenu links */
+.submenu .nav-link {
+  font-size: 0.9rem; /* Slightly smaller than main nav */
+  padding-left: 1.5rem; /* Indented to show hierarchy */
+}
+
+/* Hover effect for submenu links */
+.submenu .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Same hover effect */
+}
+
+/* Button to toggle sidebar */
+.toggle-sidebar-btn {
+  background-color: #495057; /* Medium dark background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 0.5rem 1rem; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 1rem; /* Space around button */
+  align-self: flex-start; /* Aligns button to top-left */
+}
+
+/* Main content area */
+.content {
+  flex-grow: 1; /* Takes remaining space */
+  padding: 2rem; /* Adds space around content */
+  margin-left: 240px; /* Matches sidebar width */
+  transition: margin-left 0.3s ease; /* Smooth shift when sidebar collapses */
+}
+
+/* Adjust content margin when sidebar is collapsed */
+.sidebar.collapsed + .content {
+  margin-left: 70px; /* Matches collapsed sidebar width */
+}

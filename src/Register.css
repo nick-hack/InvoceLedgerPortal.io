@@ -1,0 +1,62 @@
+.register-container {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  animation: gradientShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+  animation: fadeInLeft 1.5s ease-out;
+}
+
+.register-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  animation: fadeInRight 1.5s ease-out;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: slideDown 1.2s ease-out;
+}
+
+.animated-img {
+  max-width: 300px;
+  animation: floatUp 2s ease-in-out infinite alternate;
+}
+
+.animated-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
